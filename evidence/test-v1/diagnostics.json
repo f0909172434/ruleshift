@@ -1,0 +1,2468 @@
+{
+  "breakdown": [
+    {
+      "policy": "none",
+      "schedule": "multi",
+      "scope": "changes",
+      "n": 10,
+      "successes": 3,
+      "policy_reads": 80,
+      "tool_calls": 108
+    },
+    {
+      "policy": "none",
+      "schedule": "multi",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 9,
+      "policy_reads": 13,
+      "tool_calls": 51
+    },
+    {
+      "policy": "none",
+      "schedule": "multi",
+      "scope": "returns",
+      "n": 20,
+      "successes": 17,
+      "policy_reads": 56,
+      "tool_calls": 112
+    },
+    {
+      "policy": "none",
+      "schedule": "recurring",
+      "scope": "changes",
+      "n": 10,
+      "successes": 3,
+      "policy_reads": 80,
+      "tool_calls": 108
+    },
+    {
+      "policy": "none",
+      "schedule": "recurring",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 7,
+      "policy_reads": 31,
+      "tool_calls": 67
+    },
+    {
+      "policy": "none",
+      "schedule": "recurring",
+      "scope": "returns",
+      "n": 20,
+      "successes": 17,
+      "policy_reads": 56,
+      "tool_calls": 116
+    },
+    {
+      "policy": "none",
+      "schedule": "single",
+      "scope": "changes",
+      "n": 10,
+      "successes": 7,
+      "policy_reads": 44,
+      "tool_calls": 76
+    },
+    {
+      "policy": "none",
+      "schedule": "single",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 9,
+      "policy_reads": 13,
+      "tool_calls": 51
+    },
+    {
+      "policy": "none",
+      "schedule": "single",
+      "scope": "returns",
+      "n": 20,
+      "successes": 17,
+      "policy_reads": 56,
+      "tool_calls": 112
+    },
+    {
+      "policy": "none",
+      "schedule": "stable",
+      "scope": "changes",
+      "n": 10,
+      "successes": 7,
+      "policy_reads": 44,
+      "tool_calls": 76
+    },
+    {
+      "policy": "none",
+      "schedule": "stable",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 9,
+      "policy_reads": 13,
+      "tool_calls": 51
+    },
+    {
+      "policy": "none",
+      "schedule": "stable",
+      "scope": "returns",
+      "n": 20,
+      "successes": 18,
+      "policy_reads": 59,
+      "tool_calls": 122
+    },
+    {
+      "policy": "refresh",
+      "schedule": "multi",
+      "scope": "changes",
+      "n": 10,
+      "successes": 5,
+      "policy_reads": 10,
+      "tool_calls": 46
+    },
+    {
+      "policy": "refresh",
+      "schedule": "multi",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 13,
+      "tool_calls": 55
+    },
+    {
+      "policy": "refresh",
+      "schedule": "multi",
+      "scope": "returns",
+      "n": 20,
+      "successes": 20,
+      "policy_reads": 20,
+      "tool_calls": 86
+    },
+    {
+      "policy": "refresh",
+      "schedule": "recurring",
+      "scope": "changes",
+      "n": 10,
+      "successes": 5,
+      "policy_reads": 10,
+      "tool_calls": 46
+    },
+    {
+      "policy": "refresh",
+      "schedule": "recurring",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 12,
+      "tool_calls": 53
+    },
+    {
+      "policy": "refresh",
+      "schedule": "recurring",
+      "scope": "returns",
+      "n": 20,
+      "successes": 20,
+      "policy_reads": 20,
+      "tool_calls": 96
+    },
+    {
+      "policy": "refresh",
+      "schedule": "single",
+      "scope": "changes",
+      "n": 10,
+      "successes": 1,
+      "policy_reads": 10,
+      "tool_calls": 50
+    },
+    {
+      "policy": "refresh",
+      "schedule": "single",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 13,
+      "tool_calls": 55
+    },
+    {
+      "policy": "refresh",
+      "schedule": "single",
+      "scope": "returns",
+      "n": 20,
+      "successes": 20,
+      "policy_reads": 20,
+      "tool_calls": 86
+    },
+    {
+      "policy": "refresh",
+      "schedule": "stable",
+      "scope": "changes",
+      "n": 10,
+      "successes": 1,
+      "policy_reads": 10,
+      "tool_calls": 50
+    },
+    {
+      "policy": "refresh",
+      "schedule": "stable",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 13,
+      "tool_calls": 54
+    },
+    {
+      "policy": "refresh",
+      "schedule": "stable",
+      "scope": "returns",
+      "n": 20,
+      "successes": 20,
+      "policy_reads": 20,
+      "tool_calls": 102
+    },
+    {
+      "policy": "retrieval",
+      "schedule": "multi",
+      "scope": "changes",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 14,
+      "tool_calls": 60
+    },
+    {
+      "policy": "retrieval",
+      "schedule": "multi",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 4,
+      "tool_calls": 50
+    },
+    {
+      "policy": "retrieval",
+      "schedule": "multi",
+      "scope": "returns",
+      "n": 20,
+      "successes": 18,
+      "policy_reads": 17,
+      "tool_calls": 85
+    },
+    {
+      "policy": "retrieval",
+      "schedule": "recurring",
+      "scope": "changes",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 14,
+      "tool_calls": 60
+    },
+    {
+      "policy": "retrieval",
+      "schedule": "recurring",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 6,
+      "tool_calls": 50
+    },
+    {
+      "policy": "retrieval",
+      "schedule": "recurring",
+      "scope": "returns",
+      "n": 20,
+      "successes": 19,
+      "policy_reads": 20,
+      "tool_calls": 89
+    },
+    {
+      "policy": "retrieval",
+      "schedule": "single",
+      "scope": "changes",
+      "n": 10,
+      "successes": 9,
+      "policy_reads": 6,
+      "tool_calls": 56
+    },
+    {
+      "policy": "retrieval",
+      "schedule": "single",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 4,
+      "tool_calls": 50
+    },
+    {
+      "policy": "retrieval",
+      "schedule": "single",
+      "scope": "returns",
+      "n": 20,
+      "successes": 18,
+      "policy_reads": 17,
+      "tool_calls": 85
+    },
+    {
+      "policy": "retrieval",
+      "schedule": "stable",
+      "scope": "changes",
+      "n": 10,
+      "successes": 9,
+      "policy_reads": 6,
+      "tool_calls": 56
+    },
+    {
+      "policy": "retrieval",
+      "schedule": "stable",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 4,
+      "tool_calls": 50
+    },
+    {
+      "policy": "retrieval",
+      "schedule": "stable",
+      "scope": "returns",
+      "n": 20,
+      "successes": 20,
+      "policy_reads": 29,
+      "tool_calls": 97
+    },
+    {
+      "policy": "selective",
+      "schedule": "multi",
+      "scope": "changes",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 10,
+      "tool_calls": 56
+    },
+    {
+      "policy": "selective",
+      "schedule": "multi",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 2,
+      "tool_calls": 48
+    },
+    {
+      "policy": "selective",
+      "schedule": "multi",
+      "scope": "returns",
+      "n": 20,
+      "successes": 18,
+      "policy_reads": 35,
+      "tool_calls": 107
+    },
+    {
+      "policy": "selective",
+      "schedule": "recurring",
+      "scope": "changes",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 10,
+      "tool_calls": 56
+    },
+    {
+      "policy": "selective",
+      "schedule": "recurring",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 4,
+      "tool_calls": 48
+    },
+    {
+      "policy": "selective",
+      "schedule": "recurring",
+      "scope": "returns",
+      "n": 20,
+      "successes": 19,
+      "policy_reads": 29,
+      "tool_calls": 99
+    },
+    {
+      "policy": "selective",
+      "schedule": "single",
+      "scope": "changes",
+      "n": 10,
+      "successes": 9,
+      "policy_reads": 6,
+      "tool_calls": 56
+    },
+    {
+      "policy": "selective",
+      "schedule": "single",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 2,
+      "tool_calls": 48
+    },
+    {
+      "policy": "selective",
+      "schedule": "single",
+      "scope": "returns",
+      "n": 20,
+      "successes": 18,
+      "policy_reads": 35,
+      "tool_calls": 107
+    },
+    {
+      "policy": "selective",
+      "schedule": "stable",
+      "scope": "changes",
+      "n": 10,
+      "successes": 9,
+      "policy_reads": 6,
+      "tool_calls": 56
+    },
+    {
+      "policy": "selective",
+      "schedule": "stable",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 10,
+      "policy_reads": 2,
+      "tool_calls": 48
+    },
+    {
+      "policy": "selective",
+      "schedule": "stable",
+      "scope": "returns",
+      "n": 20,
+      "successes": 20,
+      "policy_reads": 37,
+      "tool_calls": 106
+    },
+    {
+      "policy": "ttl",
+      "schedule": "multi",
+      "scope": "changes",
+      "n": 10,
+      "successes": 3,
+      "policy_reads": 80,
+      "tool_calls": 108
+    },
+    {
+      "policy": "ttl",
+      "schedule": "multi",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 9,
+      "policy_reads": 13,
+      "tool_calls": 51
+    },
+    {
+      "policy": "ttl",
+      "schedule": "multi",
+      "scope": "returns",
+      "n": 20,
+      "successes": 17,
+      "policy_reads": 33,
+      "tool_calls": 101
+    },
+    {
+      "policy": "ttl",
+      "schedule": "recurring",
+      "scope": "changes",
+      "n": 10,
+      "successes": 3,
+      "policy_reads": 80,
+      "tool_calls": 108
+    },
+    {
+      "policy": "ttl",
+      "schedule": "recurring",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 7,
+      "policy_reads": 31,
+      "tool_calls": 67
+    },
+    {
+      "policy": "ttl",
+      "schedule": "recurring",
+      "scope": "returns",
+      "n": 20,
+      "successes": 18,
+      "policy_reads": 37,
+      "tool_calls": 100
+    },
+    {
+      "policy": "ttl",
+      "schedule": "single",
+      "scope": "changes",
+      "n": 10,
+      "successes": 7,
+      "policy_reads": 44,
+      "tool_calls": 76
+    },
+    {
+      "policy": "ttl",
+      "schedule": "single",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 9,
+      "policy_reads": 13,
+      "tool_calls": 51
+    },
+    {
+      "policy": "ttl",
+      "schedule": "single",
+      "scope": "returns",
+      "n": 20,
+      "successes": 17,
+      "policy_reads": 33,
+      "tool_calls": 101
+    },
+    {
+      "policy": "ttl",
+      "schedule": "stable",
+      "scope": "changes",
+      "n": 10,
+      "successes": 7,
+      "policy_reads": 44,
+      "tool_calls": 76
+    },
+    {
+      "policy": "ttl",
+      "schedule": "stable",
+      "scope": "fulfillment",
+      "n": 10,
+      "successes": 9,
+      "policy_reads": 12,
+      "tool_calls": 50
+    },
+    {
+      "policy": "ttl",
+      "schedule": "stable",
+      "scope": "returns",
+      "n": 20,
+      "successes": 20,
+      "policy_reads": 35,
+      "tool_calls": 101
+    }
+  ],
+  "failures": [
+    {
+      "stream": "multi-101-none",
+      "task_index": 0,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "complete",
+          "reason": "ok"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "multi-101-none",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "multi-101-none",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "multi-101-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "multi-101-ttl",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "multi-101-ttl",
+      "task_index": 3,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "complete",
+          "reason": "ok"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "multi-101-ttl",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "multi-202-none",
+      "task_index": 3,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "accept_opened:false"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "multi-202-none",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "multi-202-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "multi-202-retrieval",
+      "task_index": 7,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "too_old"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "multi-202-selective",
+      "task_index": 7,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "too_old"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "multi-202-ttl",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "multi-202-ttl",
+      "task_index": 7,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "too_old"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "multi-303-none",
+      "task_index": 1,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "multi-303-none",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "multi-303-none",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "multi-303-retrieval",
+      "task_index": 3,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "too_old"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "multi-303-selective",
+      "task_index": 3,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "too_old"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "multi-303-ttl",
+      "task_index": 1,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "multi-303-ttl",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "multi-303-ttl",
+      "task_index": 3,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "too_old"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "multi-303-ttl",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "multi-404-none",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "multi-404-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "multi-404-ttl",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "multi-505-none",
+      "task_index": 0,
+      "classification": "state_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "complete",
+          "reason": "ok"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "multi-505-none",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 10
+      }
+    },
+    {
+      "stream": "multi-505-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "multi-505-refresh",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "multi-505-ttl",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 10
+      }
+    },
+    {
+      "stream": "recurring-101-none",
+      "task_index": 0,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "complete",
+          "reason": "ok"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "recurring-101-none",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "recurring-101-none",
+      "task_index": 4,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "recurring-101-none",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "recurring-101-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "recurring-101-ttl",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "recurring-101-ttl",
+      "task_index": 3,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "complete",
+          "reason": "ok"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "recurring-101-ttl",
+      "task_index": 4,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "recurring-101-ttl",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "recurring-202-none",
+      "task_index": 3,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "accept_opened:false"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "recurring-202-none",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "recurring-202-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "recurring-202-ttl",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "recurring-303-none",
+      "task_index": 1,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "recurring-303-none",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "recurring-303-none",
+      "task_index": 4,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "recurring-303-none",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "recurring-303-retrieval",
+      "task_index": 3,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "too_old"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "recurring-303-selective",
+      "task_index": 3,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "too_old"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "recurring-303-ttl",
+      "task_index": 1,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "recurring-303-ttl",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "recurring-303-ttl",
+      "task_index": 3,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "too_old"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "recurring-303-ttl",
+      "task_index": 4,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "recurring-303-ttl",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "recurring-404-none",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "recurring-404-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "recurring-404-ttl",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "recurring-505-none",
+      "task_index": 0,
+      "classification": "state_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "complete",
+          "reason": "ok"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "recurring-505-none",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 10
+      }
+    },
+    {
+      "stream": "recurring-505-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "recurring-505-refresh",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "recurring-505-ttl",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 10
+      }
+    },
+    {
+      "stream": "single-101-none",
+      "task_index": 0,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "complete",
+          "reason": "ok"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "single-101-none",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "single-101-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "single-101-refresh",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "single-101-ttl",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "single-101-ttl",
+      "task_index": 3,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "complete",
+          "reason": "ok"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "single-202-none",
+      "task_index": 3,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "accept_opened:false"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "single-202-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "single-202-refresh",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "single-202-retrieval",
+      "task_index": 7,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "too_old"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "single-202-selective",
+      "task_index": 7,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "too_old"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "single-202-ttl",
+      "task_index": 7,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "too_old"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "single-303-none",
+      "task_index": 1,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "single-303-none",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "single-303-refresh",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "single-303-retrieval",
+      "task_index": 3,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "too_old"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "single-303-selective",
+      "task_index": 3,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "too_old"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "single-303-ttl",
+      "task_index": 1,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "single-303-ttl",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "single-303-ttl",
+      "task_index": 3,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "too_old"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "single-404-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "single-404-refresh",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "single-505-none",
+      "task_index": 0,
+      "classification": "state_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "complete",
+          "reason": "ok"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "single-505-none",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 10
+      }
+    },
+    {
+      "stream": "single-505-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "single-505-refresh",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "single-505-retrieval",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "change_order",
+        "args": {
+          "order_id": "ORD-006",
+          "address": "25 New Street"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1,
+        "already_changed": 5
+      }
+    },
+    {
+      "stream": "single-505-selective",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "change_order",
+        "args": {
+          "order_id": "ORD-006",
+          "address": "25 New Street"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1,
+        "already_changed": 5
+      }
+    },
+    {
+      "stream": "single-505-ttl",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 10
+      }
+    },
+    {
+      "stream": "stable-101-none",
+      "task_index": 0,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "complete",
+          "reason": "ok"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "stable-101-none",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "stable-101-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "stable-101-refresh",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "stable-101-ttl",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "stable-202-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "stable-202-refresh",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "stable-303-none",
+      "task_index": 1,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "stable-303-none",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "stable-303-refresh",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "stable-303-ttl",
+      "task_index": 1,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "policy_block": 1,
+        "unknown_scope": 9
+      }
+    },
+    {
+      "stream": "stable-303-ttl",
+      "task_index": 2,
+      "classification": "state_and_decision",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 11
+      }
+    },
+    {
+      "stream": "stable-404-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "stable-404-refresh",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "stable-505-none",
+      "task_index": 0,
+      "classification": "state_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "complete",
+          "reason": "ok"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1
+      }
+    },
+    {
+      "stream": "stable-505-none",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 10
+      }
+    },
+    {
+      "stream": "stable-505-refresh",
+      "task_index": 2,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "stable-505-refresh",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "finish",
+        "args": {
+          "decision": "deny",
+          "reason": "already_changed"
+        }
+      },
+      "observed_errors": {
+        "already_changed": 1
+      }
+    },
+    {
+      "stream": "stable-505-retrieval",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "change_order",
+        "args": {
+          "order_id": "ORD-006",
+          "address": "25 New Street"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1,
+        "already_changed": 5
+      }
+    },
+    {
+      "stream": "stable-505-selective",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "change_order",
+        "args": {
+          "order_id": "ORD-006",
+          "address": "25 New Street"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 1,
+        "already_changed": 5
+      }
+    },
+    {
+      "stream": "stable-505-ttl",
+      "task_index": 5,
+      "classification": "decision_only",
+      "stale_consistent": false,
+      "last_action": {
+        "tool": "read_policy",
+        "args": {
+          "scope": "returns|fulfillment|changes"
+        }
+      },
+      "observed_errors": {
+        "unknown_scope": 10
+      }
+    }
+  ],
+  "failure_counts": {
+    "decision_only": 93,
+    "state_and_decision": 16,
+    "state_only": 4
+  },
+  "seed_block_sensitivity": {
+    "label": "Post-run seed-block sensitivity; not a replacement for the frozen primary analysis",
+    "unit": "seed, retaining all four fixed schedules",
+    "n_seeds": 5,
+    "seed_mean_differences": {
+      "101": 0.1875,
+      "202": 0.125,
+      "303": -0.03125,
+      "404": 0.1875,
+      "505": 0.1875
+    },
+    "mean_success_difference": 0.13125,
+    "percentile_95_interval": [
+      0.04375,
+      0.1875
+    ],
+    "limits": "Only five seeds. Repeated deterministic templates and fixed schedules limit population inference."
+  },
+  "max_recorded_mlx_peak_gib": 2.811679933220148,
+  "summed_task_wall_seconds": 5279.741318542394,
+  "summed_model_seconds": 5271.352390074753,
+  "post_review_diagnostics": {
+    "read_accounting": {
+      "none": {
+        "attempts": 545,
+        "successful_observations": 163,
+        "errors": {
+          "unknown_scope": 382
+        }
+      },
+      "refresh": {
+        "attempts": 171,
+        "successful_observations": 163,
+        "errors": {
+          "unknown_scope": 8
+        }
+      },
+      "retrieval": {
+        "attempts": 141,
+        "successful_observations": 77,
+        "errors": {
+          "unknown_scope": 64
+        }
+      },
+      "selective": {
+        "attempts": 178,
+        "successful_observations": 122,
+        "errors": {
+          "unknown_scope": 56
+        }
+      },
+      "ttl": {
+        "attempts": 455,
+        "successful_observations": 92,
+        "errors": {
+          "unknown_scope": 363
+        }
+      }
+    },
+    "tool_error_categories": {
+      "none": {
+        "unknown_scope": 382,
+        "policy_block": 45
+      },
+      "refresh": {
+        "policy_block": 49,
+        "already_changed": 32,
+        "invalid_status": 5,
+        "wrong_operation": 4,
+        "unknown_scope": 8
+      },
+      "retrieval": {
+        "policy_block": 49,
+        "invalid_status": 26,
+        "unknown_scope": 64,
+        "already_changed": 24
+      },
+      "selective": {
+        "policy_block": 49,
+        "invalid_action": 8,
+        "unknown_scope": 56,
+        "invalid_status": 26,
+        "already_changed": 24
+      },
+      "ttl": {
+        "policy_block": 46,
+        "unknown_scope": 363,
+        "invalid_action": 2
+      }
+    },
+    "failure_pattern_counts": {
+      "false_completion": 11,
+      "budget_exhausted_with_unknown_scope": 52,
+      "duplicate_change_then_wrong_denial": 28,
+      "invalid_denial_reason": 18,
+      "budget_exhausted_duplicate_change": 4
+    },
+    "recovery_censoring": {
+      "none": {
+        "never_observed": 15,
+        "observed_events": 35,
+        "observed_without_success": 13
+      },
+      "refresh": {
+        "never_observed": 15,
+        "observed_events": 35,
+        "observed_without_success": 2
+      },
+      "retrieval": {
+        "never_observed": 15,
+        "observed_events": 35,
+        "observed_without_success": 1
+      },
+      "selective": {
+        "never_observed": 15,
+        "observed_events": 35,
+        "observed_without_success": 1
+      },
+      "ttl": {
+        "never_observed": 15,
+        "observed_events": 35,
+        "observed_without_success": 14
+      }
+    },
+    "unknown_scope_affected_tasks": 350,
+    "budget_capped_tasks": 56,
+    "budget_capped_task_tokens": 456270,
+    "limits": "Post-run descriptive patterns, not causal attributions; all frozen results retained."
+  }
+}

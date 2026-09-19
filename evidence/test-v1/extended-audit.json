@@ -1,0 +1,13 @@
+{
+  "verified": true,
+  "complete": true,
+  "records": 800,
+  "planned": 800,
+  "missing": 0,
+  "replayed_events_including_shared_prefixes": 23332,
+  "source_and_protocol_verified": true,
+  "scores_and_costs_recomputed": true,
+  "prompts_reconstructed": 4233,
+  "memory_states_reconciled": true,
+  "scope": "World, score, prompt, memory and recorded accounting checks; no neural rerun or independent retokenization."
+}

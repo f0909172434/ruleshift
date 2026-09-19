@@ -1,0 +1,2702 @@
+{
+  "completed_tasks": 800,
+  "planned_tasks": 800,
+  "complete": true,
+  "policies": [
+    {
+      "policy": "none",
+      "n": 160,
+      "successes": 123,
+      "success_rate": 0.76875,
+      "unchanged_scope_n": 100,
+      "unchanged_scope_successes": 78,
+      "stale_consistent_errors": 0,
+      "tool_calls": 1050,
+      "policy_reads": 545,
+      "illegal_attempts": 427,
+      "prompt_tokens": 615402,
+      "completion_tokens": 17077,
+      "wall_seconds": 1289.4500658810139,
+      "model_seconds": 1287.589573374018
+    },
+    {
+      "policy": "refresh",
+      "n": 160,
+      "successes": 132,
+      "success_rate": 0.825,
+      "unchanged_scope_n": 100,
+      "unchanged_scope_successes": 74,
+      "stale_consistent_errors": 0,
+      "tool_calls": 779,
+      "policy_reads": 171,
+      "illegal_attempts": 98,
+      "prompt_tokens": 390085,
+      "completion_tokens": 10406,
+      "wall_seconds": 798.8230010063853,
+      "model_seconds": 797.5389460708247
+    },
+    {
+      "policy": "retrieval",
+      "n": 160,
+      "successes": 153,
+      "success_rate": 0.95625,
+      "unchanged_scope_n": 100,
+      "unchanged_scope_successes": 98,
+      "stale_consistent_errors": 0,
+      "tool_calls": 788,
+      "policy_reads": 141,
+      "illegal_attempts": 163,
+      "prompt_tokens": 478790,
+      "completion_tokens": 12815,
+      "wall_seconds": 974.9324618689716,
+      "model_seconds": 973.306532789953
+    },
+    {
+      "policy": "selective",
+      "n": 160,
+      "successes": 153,
+      "success_rate": 0.95625,
+      "unchanged_scope_n": 100,
+      "unchanged_scope_successes": 98,
+      "stale_consistent_errors": 0,
+      "tool_calls": 835,
+      "policy_reads": 178,
+      "illegal_attempts": 163,
+      "prompt_tokens": 481103,
+      "completion_tokens": 12783,
+      "wall_seconds": 977.2276182458736,
+      "model_seconds": 975.5815057597356
+    },
+    {
+      "policy": "ttl",
+      "n": 160,
+      "successes": 126,
+      "success_rate": 0.7875,
+      "unchanged_scope_n": 100,
+      "unchanged_scope_successes": 86,
+      "stale_consistent_errors": 0,
+      "tool_calls": 990,
+      "policy_reads": 455,
+      "illegal_attempts": 411,
+      "prompt_tokens": 591496,
+      "completion_tokens": 16297,
+      "wall_seconds": 1239.3081715401495,
+      "model_seconds": 1237.3358320802217
+    }
+  ],
+  "paired_comparison": {
+    "contrast": "selective minus refresh",
+    "unit": "paired task stream",
+    "n_pairs": 20,
+    "mean_success_difference": 0.13125,
+    "bootstrap_95_percent_interval": [
+      0.075,
+      0.18125
+    ],
+    "pairs": [
+      {
+        "schedule": "multi",
+        "seed": 101,
+        "success_difference": 0.125
+      },
+      {
+        "schedule": "multi",
+        "seed": 202,
+        "success_difference": 0.0
+      },
+      {
+        "schedule": "multi",
+        "seed": 303,
+        "success_difference": -0.125
+      },
+      {
+        "schedule": "multi",
+        "seed": 404,
+        "success_difference": 0.125
+      },
+      {
+        "schedule": "multi",
+        "seed": 505,
+        "success_difference": 0.25
+      },
+      {
+        "schedule": "recurring",
+        "seed": 101,
+        "success_difference": 0.125
+      },
+      {
+        "schedule": "recurring",
+        "seed": 202,
+        "success_difference": 0.125
+      },
+      {
+        "schedule": "recurring",
+        "seed": 303,
+        "success_difference": -0.125
+      },
+      {
+        "schedule": "recurring",
+        "seed": 404,
+        "success_difference": 0.125
+      },
+      {
+        "schedule": "recurring",
+        "seed": 505,
+        "success_difference": 0.25
+      },
+      {
+        "schedule": "single",
+        "seed": 101,
+        "success_difference": 0.25
+      },
+      {
+        "schedule": "single",
+        "seed": 202,
+        "success_difference": 0.125
+      },
+      {
+        "schedule": "single",
+        "seed": 303,
+        "success_difference": 0.0
+      },
+      {
+        "schedule": "single",
+        "seed": 404,
+        "success_difference": 0.25
+      },
+      {
+        "schedule": "single",
+        "seed": 505,
+        "success_difference": 0.125
+      },
+      {
+        "schedule": "stable",
+        "seed": 101,
+        "success_difference": 0.25
+      },
+      {
+        "schedule": "stable",
+        "seed": 202,
+        "success_difference": 0.25
+      },
+      {
+        "schedule": "stable",
+        "seed": 303,
+        "success_difference": 0.125
+      },
+      {
+        "schedule": "stable",
+        "seed": 404,
+        "success_difference": 0.25
+      },
+      {
+        "schedule": "stable",
+        "seed": 505,
+        "success_difference": 0.125
+      }
+    ]
+  },
+  "recovery": [
+    {
+      "schedule": "multi",
+      "seed": 101,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 101,
+      "policy": "none",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 101,
+      "policy": "none",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 101,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 101,
+      "policy": "refresh",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 101,
+      "policy": "refresh",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 101,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 101,
+      "policy": "retrieval",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 101,
+      "policy": "retrieval",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 101,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 101,
+      "policy": "selective",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 101,
+      "policy": "selective",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 101,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 2,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 101,
+      "policy": "ttl",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 101,
+      "policy": "ttl",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 202,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 2,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 202,
+      "policy": "none",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 202,
+      "policy": "none",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 202,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 202,
+      "policy": "refresh",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 202,
+      "policy": "refresh",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 202,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 202,
+      "policy": "retrieval",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 202,
+      "policy": "retrieval",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 202,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 202,
+      "policy": "selective",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 202,
+      "policy": "selective",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 202,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 202,
+      "policy": "ttl",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 202,
+      "policy": "ttl",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 303,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 303,
+      "policy": "none",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 303,
+      "policy": "none",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 303,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 303,
+      "policy": "refresh",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 303,
+      "policy": "refresh",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 303,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 2,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 303,
+      "policy": "retrieval",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 303,
+      "policy": "retrieval",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 303,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 2,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 303,
+      "policy": "selective",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 303,
+      "policy": "selective",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 303,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 2,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 303,
+      "policy": "ttl",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 303,
+      "policy": "ttl",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 404,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 404,
+      "policy": "none",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 404,
+      "policy": "none",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 404,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 404,
+      "policy": "refresh",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 404,
+      "policy": "refresh",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 404,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 404,
+      "policy": "retrieval",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 404,
+      "policy": "retrieval",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 404,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 404,
+      "policy": "selective",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 404,
+      "policy": "selective",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 404,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 404,
+      "policy": "ttl",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 404,
+      "policy": "ttl",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 505,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 505,
+      "policy": "none",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 505,
+      "policy": "none",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 505,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 505,
+      "policy": "refresh",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 505,
+      "policy": "refresh",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 505,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 505,
+      "policy": "retrieval",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 505,
+      "policy": "retrieval",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 505,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 505,
+      "policy": "selective",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 505,
+      "policy": "selective",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 505,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "multi",
+      "seed": 505,
+      "policy": "ttl",
+      "scope": "fulfillment",
+      "change_at": 5,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "multi",
+      "seed": 505,
+      "policy": "ttl",
+      "scope": "changes",
+      "change_at": 5,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "none",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "none",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "none",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "none",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "refresh",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "refresh",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "refresh",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "refresh",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "retrieval",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "retrieval",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "retrieval",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "retrieval",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "selective",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "selective",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "selective",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "selective",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "ttl",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "ttl",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "ttl",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 101,
+      "policy": "ttl",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "none",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "none",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "none",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "none",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "refresh",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "refresh",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "refresh",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "refresh",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "retrieval",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "retrieval",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "retrieval",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "retrieval",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "selective",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "selective",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "selective",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "selective",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "ttl",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "ttl",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "ttl",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 202,
+      "policy": "ttl",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "none",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "none",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "none",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "none",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "refresh",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "refresh",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "refresh",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "refresh",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "retrieval",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "retrieval",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "retrieval",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "retrieval",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "selective",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "selective",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "selective",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "selective",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "ttl",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "ttl",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "ttl",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 303,
+      "policy": "ttl",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "none",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "none",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "none",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "none",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "refresh",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "refresh",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "refresh",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "refresh",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "retrieval",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "retrieval",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "retrieval",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "retrieval",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "selective",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "selective",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "selective",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "selective",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "ttl",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "ttl",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "ttl",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 404,
+      "policy": "ttl",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "none",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "none",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "none",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "none",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "refresh",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "refresh",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "refresh",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "refresh",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "retrieval",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "retrieval",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "retrieval",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "retrieval",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "selective",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "selective",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "selective",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "selective",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 6,
+      "affected_tasks_observed": 2,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "ttl",
+      "scope": "fulfillment",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "ttl",
+      "scope": "fulfillment",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "ttl",
+      "scope": "changes",
+      "change_at": 3,
+      "affected_tasks_observed": 1,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "recurring",
+      "seed": 505,
+      "policy": "ttl",
+      "scope": "changes",
+      "change_at": 6,
+      "affected_tasks_observed": 0,
+      "tasks_to_first_success": null,
+      "censored": true
+    },
+    {
+      "schedule": "single",
+      "seed": 101,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 101,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 101,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 101,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 101,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 2,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 202,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 2,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 202,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 202,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 202,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 202,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 303,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 303,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 303,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 2,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 303,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 2,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 303,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 2,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 404,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 404,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 404,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 404,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 404,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 505,
+      "policy": "none",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 505,
+      "policy": "refresh",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 505,
+      "policy": "retrieval",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 505,
+      "policy": "selective",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    },
+    {
+      "schedule": "single",
+      "seed": 505,
+      "policy": "ttl",
+      "scope": "returns",
+      "change_at": 3,
+      "affected_tasks_observed": 3,
+      "tasks_to_first_success": 1,
+      "censored": false
+    }
+  ],
+  "claims": "Frozen-weight, synthetic-retail, single-model pilot. Not a production or general-intelligence claim."
+}

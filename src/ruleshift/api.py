@@ -128,13 +128,21 @@ def experiments():
     for manifest_path in sorted((ROOT / "artifacts" / "runs").glob("*/manifest.json")):
         manifest = json.loads(manifest_path.read_text())
         root = manifest_path.parent
-        count = 0
+        count, status = 0, "initializing"
         if (root / "index.sqlite").exists():
-            con = sqlite3.connect(f"file:{root / 'index.sqlite'}?mode=ro", uri=True)
             try:
-                count = con.execute("SELECT COUNT(*) FROM tasks").fetchone()[0]
-            finally:
-                con.close()
+                con = sqlite3.connect(f"file:{root / 'index.sqlite'}?mode=ro", uri=True)
+                try:
+                    initialized = con.execute(
+                        "SELECT 1 FROM sqlite_master WHERE type='table' AND name='tasks'"
+                    ).fetchone()
+                    if initialized:
+                        count = con.execute("SELECT COUNT(*) FROM tasks").fetchone()[0]
+                        status = "ready"
+                finally:
+                    con.close()
+            except sqlite3.DatabaseError:
+                count, status = None, "unavailable"
         rows.append(
             {
                 "name": root.name,
@@ -142,7 +150,8 @@ def experiments():
                 "planned": manifest["planned_tasks"],
                 "split": manifest["config"]["split"],
                 "model": manifest["config"]["model"],
-                "available": (root / "explorer.json").exists(),
+                "available": status == "ready" and (root / "explorer.json").exists(),
+                "status": status,
             }
         )
     return rows

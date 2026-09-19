@@ -265,7 +265,7 @@ function Timeline({
               className={`time-point ${i === selected ? "selected" : ""} ${change ? "change" : ""}`}
               disabled={i >= available || (live && i !== selected)}
               onClick={() => onSelect(i)}
-              aria-label={`任務 ${i + 1}${change ? "，規則變更" : ""}`}
+              aria-label={`任務 ${i + 1}${change ? "，規則變更" : ""}，${names[["returns", "fulfillment", "changes", "returns", "fulfillment", "changes", "returns", "returns"][i]]}，${change ? (schedule === "recurring" && i === 6 ? "恢復原始規則" : "此處改變規則") : "延續當前規則"}`}
               aria-pressed={i === selected}
               aria-describedby={`timeline-hint-${i}`}
             >
@@ -402,34 +402,37 @@ function App() {
     api("health")
       .then(() => {
         setOnline(true);
-        refreshDatasets();
+        return refreshDatasets();
       })
-      .catch(() => {
-        fetch("./explorer.json")
-          .then((r) => {
-            if (!r.ok) throw Error();
-            return r.json();
-          })
-          .then((d) => {
-            setData(d);
-            setSeed(d.manifest.config.seeds[0]);
-            setReplaySchedule(d.manifest.config.schedules.at(-1));
-            setPolicy(
-              d.manifest.config.policies.includes("selective")
-                ? "selective"
-                : d.manifest.config.policies[0],
-            );
-          })
-          .catch(() => setNotice("啟動本機服務後，即可操作世界與查看實驗。"));
-      });
+      .catch(loadBundledDataset);
   }, []);
+  async function loadBundledDataset() {
+    try {
+      const response = await fetch("./explorer.json");
+      if (!response.ok) throw Error();
+      const d = await response.json();
+      setData(d);
+      setDataset("");
+      setSeed(d.manifest.config.seeds[0]);
+      setReplaySchedule(d.manifest.config.schedules.at(-1));
+      setPolicy(
+        d.manifest.config.policies.includes("selective")
+          ? "selective"
+          : d.manifest.config.policies[0],
+      );
+      setEpisode(0);
+    } catch {
+      setNotice("啟動本機服務後，即可操作世界與查看實驗。");
+    }
+  }
   async function refreshDatasets() {
     const ds = await api("experiments");
     setDatasets(ds);
     const preferred =
       [...ds].reverse().find((d) => d.available && d.split === "test") ||
       [...ds].reverse().find((d) => d.available && d.name !== "smoke-v1");
-    if (preferred) loadDataset(preferred.name);
+    if (preferred) await loadDataset(preferred.name);
+    else await loadBundledDataset();
   }
   async function loadDataset(name) {
     try {
@@ -522,8 +525,10 @@ function App() {
       const a = document.createElement("a");
       a.href = url;
       a.download = "ruleshift-world.json";
+      document.body.appendChild(a);
       a.click();
-      URL.revokeObjectURL(url);
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
     });
   };
   return (
@@ -559,7 +564,7 @@ function App() {
                 setTab(key);
                 setNotice("");
                 setError("");
-                if (key === "replay" && online)
+                if (key === "replay" && online && !data)
                   refreshDatasets().catch(() => {});
               }}
             >
@@ -615,6 +620,47 @@ function App() {
               <p>
                 從完全不保留記憶，到每次重新查證。比較實際結果，也把失敗留在畫面裡。
               </p>
+              {data && (
+                <div
+                  className="strategy-chart"
+                  aria-label="實測策略成功率，點選查看回放"
+                >
+                  <div className="strategy-chart-heading">
+                    <span>實測成功率</span>
+                    <span>
+                      點選策略，追蹤每一步 <ArrowRight size={13} />
+                    </span>
+                  </div>
+                  {data.summary.policies.map((row) => (
+                    <button
+                      key={row.policy}
+                      className="strategy-row"
+                      onClick={() => {
+                        setPolicy(row.policy);
+                        setEpisode(0);
+                        setTab("replay");
+                      }}
+                      aria-label={`${policyNames[row.policy]}，成功 ${row.successes} / ${row.n}，查看回放`}
+                    >
+                      <span className="strategy-name">
+                        {policyNames[row.policy]}
+                      </span>
+                      <span className="strategy-track" aria-hidden="true">
+                        <span style={{ width: `${row.success_rate * 100}%` }} />
+                      </span>
+                      <span className="strategy-rate">
+                        {(row.success_rate * 100).toFixed(1)}
+                        <small>%</small>
+                      </span>
+                      <span className="strategy-detail">
+                        {row.successes} / {row.n} 成功 · {fmt(row.policy_reads)}{" "}
+                        次查詢嘗試
+                      </span>
+                      <ArrowUpRight className="strategy-arrow" size={17} />
+                    </button>
+                  ))}
+                </div>
+              )}
               <button onClick={() => setTab("replay")}>
                 查看逐步回放 <ArrowRight size={16} />
               </button>
@@ -927,7 +973,7 @@ function App() {
                   </span>
                 </div>
                 <div className="filters">
-                  {online && (
+                  {online && datasets.some((d) => d.available) && (
                     <label>
                       實驗批次
                       <select
@@ -1019,6 +1065,27 @@ function App() {
                           order={record.order}
                           scope={record.score.scope}
                         />
+                        <div className="observed-transition">
+                          <span>
+                            實際訂單變化 ·{" "}
+                            {record.score.scope === "changes" ? "地址" : "狀態"}
+                          </span>
+                          <div>
+                            <span>
+                              {record.score.scope === "changes"
+                                ? record.order.address
+                                : statusNames[record.order.status] ||
+                                  record.order.status}
+                            </span>
+                            <ArrowRight size={15} aria-hidden="true" />
+                            <b>
+                              {record.score.scope === "changes"
+                                ? record.after.address
+                                : statusNames[record.after.status] ||
+                                  record.after.status}
+                            </b>
+                          </div>
+                        </div>
                         <div
                           className={`outcome ${record.score.success ? "pass" : "fail"}`}
                         >
@@ -1044,7 +1111,7 @@ function App() {
                             <b>{record.cost.tool_calls}</b>
                           </div>
                           <div>
-                            <span>規則查證</span>
+                            <span>規則查詢嘗試</span>
                             <b>{record.cost.policy_reads}</b>
                           </div>
                           <div>
@@ -1060,7 +1127,7 @@ function App() {
                           </div>
                         </div>
                         <p className="fineprint">
-                          所有失敗保留在分母。這是固定權重小模型的合成世界實驗，結果不等同真實產品能力。
+                          所有失敗保留在分母。查詢嘗試包含無效參數；本輪有明顯的參數格式與重複操作失敗，不能單憑成功率推論記憶策略優劣。
                         </p>
                       </aside>
                     </div>
@@ -1081,7 +1148,7 @@ function App() {
                           <th>成功 / 任務數</th>
                           <th>成功率</th>
                           <th>工具呼叫</th>
-                          <th>規則查詢</th>
+                          <th>查詢嘗試</th>
                           <th>總 tokens</th>
                         </tr>
                       </thead>
@@ -1118,7 +1185,15 @@ function App() {
                         .map((n) => (n * 100).toFixed(1))
                         .join(", ")}
                       ]。統計單位為 {data.summary.paired_comparison.n_pairs}{" "}
-                      條配對任務串。
+                      條配對任務串；相同五個種子跨情境重用，獨立性與樣本量有限，請同時參閱{" "}
+                      <a
+                        href="https://github.com/f0909172434/ruleshift/blob/main/docs/RESULTS.md"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        種子分組敏感度分析與失敗原因
+                      </a>
+                      。
                     </p>
                   )}
                 </section>
@@ -1154,7 +1229,8 @@ function App() {
                 <h3>簡單方法也是強對手</h3>
                 <p>
                   比較無記憶、既有記憶、定期淘汰、每次查證與選擇性更新。所有額外查詢與模型輸入、輸出
-                  token 成本都計入。
+                  token
+                  成本都計入。各策略共用的三筆初始規則觀察屬於暖身設定，不列入任務內查詢成本。
                 </p>
               </article>
               <article>

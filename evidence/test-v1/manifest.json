@@ -1,0 +1,42 @@
+{
+  "config": {
+    "schema_version": 1,
+    "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+    "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+    "split": "test",
+    "schedules": [
+      "stable",
+      "single",
+      "multi",
+      "recurring"
+    ],
+    "seeds": [
+      101,
+      202,
+      303,
+      404,
+      505
+    ],
+    "policies": [
+      "none",
+      "retrieval",
+      "ttl",
+      "refresh",
+      "selective"
+    ],
+    "tasks": 8,
+    "implementation_hash": "da502a7190e4e35a3b9fb1dc9e7ac3d9fe6d4b389e2123ab7ef06f850ecbbed5",
+    "tool_budget": 12,
+    "memory_tokens": 1024,
+    "generation_max_tokens": 180,
+    "protocol_hash": "9c176c68888c3af18387c6dd585039af4ea1548bb45dc0d6544305f49efab2d9",
+    "dependency_lock_hash": "032bb779cc74138e9e6ca743cf284cdb57949d444506cd8ce75ab010cb218f7d"
+  },
+  "created_utc": "2026-09-19T18:20:12Z",
+  "host": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "python": "3.12.14"
+  },
+  "planned_tasks": 800
+}

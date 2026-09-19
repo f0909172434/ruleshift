@@ -9,7 +9,7 @@
 - Greedy decoding; 180 generated tokens per response; 16 response attempts and 12 tool calls per task; 1024 token memory budget.
 - Four schedules, seeds 101/202/303/404/505, eight tasks, five memory policies.
 
-Clone the repository and run the commands in the README from the repository root. The environment and evaluator run without MLX on other supported Python platforms; the only implemented model backend requires Apple Silicon. Installing the `mlx` extra on another platform does not provide an alternative backend.
+For this evidence release, check out `v0.1.0` (`git checkout v0.1.0`) before installing dependencies or auditing; later execution source may differ. The audit uses the matching checkout and never executes untrusted archived code automatically. Clone the repository and run the commands in the README from the repository root. The environment and evaluator run without MLX on other supported Python platforms; the only implemented model backend requires Apple Silicon. Installing the `mlx` extra on another platform does not provide an alternative backend.
 
 The model download is content-version pinned. No `trust_remote_code` is enabled. Model weights are not redistributed with RuleShift. Network is needed for dependencies and the first weights download, not inference once cached. Reproducibility means deterministic world/replay and fixed inference settings; identical floating-point model outputs across hardware or future runtime versions are not guaranteed.
 
@@ -48,3 +48,25 @@ Recovery means first successful affected-scope task following a change, before t
 ## Pilot history
 
 `smoke-v1` was a development diagnostic. It exposed irrelevant tool timing in the prompt, which was removed before the fixed protocol/test. Preserve it as superseded diagnostic evidence, never combine it with confirmatory results. `smoke-v2` ran 16 development tasks; `validation-v1` ran 16 validation tasks. Neither belongs in the 800-task test denominator. Validation checked execution; test outcomes were not used to tune the prompt or strategies.
+
+## Verify the portable release
+
+Download and extract `ruleshift-test-v1.tar.gz` from the matching GitHub release.
+Check its external `.sha256` first, then run `shasum -a 256 -c SHA256SUMS` inside
+its extracted directory. From the matching source checkout, run:
+
+```sh
+uv run python -m ruleshift.audit /path/to/ruleshift-test-v1 --exported
+```
+
+The audit reads the exported gzip directly, checks the exact matrix and archived
+source hashes, reconstructs every world, recomputes scores, and reconciles tool
+history with outputs and recorded costs. It does not create a database or rerun
+model inference. Token checks reconcile recorded totals, not an independent
+retokenization. CI tests include tampered-export rejection.
+
+## v1 accounting errata (frozen protocol preserved)
+
+Every response attempt consumes the tool-call budget, so the 12-call limit binds before the nominal 16-response-attempt cap; these are not two independently reachable limits. `policy_reads` counts attempts, including failed scope requests. `illegal_attempts` includes formatting/tool errors as well as blocked business actions. See [results](RESULTS.md) for successful-read counts and prompt artifacts.
+
+`ruleshift report RUN` regenerates the aggregate `trajectories.jsonl.gz` export from SQLite, not missing individual task JSON files. The portable release is immutable; later diagnostics and the extended prompt/memory audit are separately recorded in the repository's `evidence/test-v1` directory with its own checksums.

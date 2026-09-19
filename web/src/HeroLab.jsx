@@ -70,6 +70,8 @@ export default function HeroLab({ onEnter, onReplay, online, busy }) {
   useEffect(() => () => clearTimeout(timer.current), []);
   function reset(next = kind) {
     clearTimeout(timer.current);
+    start.current = null;
+    moved.current = false;
     setKind(next);
     setTime(50);
     setRemembered(scenarios[next].a);
@@ -263,8 +265,8 @@ export default function HeroLab({ onEnter, onReplay, online, busy }) {
                 setDrag(null);
                 setOver(false);
               }}
-              onClick={() => {
-                if (!moved.current) sync();
+              onClick={(e) => {
+                if (e.detail === 0 || !moved.current) sync();
               }}
               aria-label="拖曳到記憶區，或點擊以查證更新"
             >

@@ -13,6 +13,10 @@ def main():
     bench.add_argument("--split", choices=["dev", "validation", "test"])
     report = sub.add_parser("report")
     report.add_argument("path", type=Path)
+    audit = sub.add_parser("audit", help="Verify world trajectories, source and recorded accounting")
+    audit.add_argument("path", type=Path)
+    audit.add_argument("--exported", action="store_true")
+    audit.add_argument("--allow-partial", action="store_true")
     replay = sub.add_parser("replay")
     replay.add_argument("path", type=Path)
     serve = sub.add_parser("serve")
@@ -30,6 +34,10 @@ def main():
         from ruleshift.report import report as make_report
 
         print(json.dumps(make_report(args.path), indent=2))
+    elif args.command == "audit":
+        from ruleshift.audit import audit as check_evidence
+
+        print(json.dumps(check_evidence(args.path, not args.allow_partial, args.exported), indent=2))
     elif args.command == "replay":
         from ruleshift.world import replay as verify_replay
 
