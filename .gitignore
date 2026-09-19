@@ -11,3 +11,5 @@ artifacts/models/
 *.sqlite*
 *.log
 
+
+artifacts/
