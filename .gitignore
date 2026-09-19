@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.DS_Store
+web/node_modules/
+web/dist/
+artifacts/runs/
+artifacts/models/
+*.sqlite*
+*.log
+
