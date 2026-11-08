@@ -6,7 +6,7 @@ RuleShift 是一個模擬零售世界，用來測試 Agent 的記憶能不能跟
 
 這個專案包含三部分：一套可以驗證結果的 Agent 系統、一個對各策略公平的實驗設計，以及一個能看出失敗原因的互動介面。它不是包一層聊天機器人。參考解法拿到滿分，只代表任務可解，不代表模型的能力。
 
-[Live demo / 線上互動](https://f0909172434.github.io/ruleshift/) · [Release evidence / 完整證據](https://github.com/f0909172434/ruleshift/releases)
+[Live demo / 線上互動](https://chih-kai-wang.github.io/ruleshift/) · [Release evidence / 完整證據](https://github.com/Chih-Kai-Wang/ruleshift/releases)
 
 ![RuleShift interactive rule and memory laboratory](docs/assets/overview.png)
 
@@ -25,7 +25,7 @@ RuleShift 是一個模擬零售世界，用來測試 Agent 的記憶能不能跟
 先安裝 Python 3.12、uv 與 Node.js 22 以上，然後執行：
 
 ```sh
-git clone https://github.com/f0909172434/ruleshift.git
+git clone https://github.com/Chih-Kai-Wang/ruleshift.git
 cd ruleshift
 uv sync --frozen --extra dev
 npm ci --prefix web

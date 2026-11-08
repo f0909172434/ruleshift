@@ -4,7 +4,7 @@ RuleShift is a small simulated retail world for testing whether an agent's memor
 
 [繁體中文](README.zh-TW.md) · [Protocol](docs/PROTOCOL.md) · [Research context](docs/CONTEXT.md) · [Reproduction](docs/REPRODUCING.md) · [Learning roadmap](docs/LEARNING.md)
 
-[Live demo / 線上互動](https://f0909172434.github.io/ruleshift/) · [Release evidence / 完整證據](https://github.com/f0909172434/ruleshift/releases)
+[Live demo / 線上互動](https://chih-kai-wang.github.io/ruleshift/) · [Release evidence / 完整證據](https://github.com/Chih-Kai-Wang/ruleshift/releases)
 
 ![RuleShift interactive rule and memory laboratory](docs/assets/overview.png)
 
@@ -24,7 +24,7 @@ RuleShift is a pilot research instrument. It does not claim a novel algorithm, b
 Requires Python 3.12, [uv](https://docs.astral.sh/uv/) and Node.js 22+. The environment, tests and workbench do not need model weights or credentials.
 
 ```sh
-git clone https://github.com/f0909172434/ruleshift.git
+git clone https://github.com/Chih-Kai-Wang/ruleshift.git
 cd ruleshift
 uv sync --frozen --extra dev
 uv run ruleshift verify
